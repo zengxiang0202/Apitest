@@ -1,0 +1,10 @@
+file_name: Delivery_System_V1.5.xls
+case_data:
+  - 标题
+  - 请求参数
+  - 响应预期结果
+sheet_name:
+  Login: 登录模块
+  Shop: 我的商铺
+  Food: 食品管理
+  Order: 我的订单

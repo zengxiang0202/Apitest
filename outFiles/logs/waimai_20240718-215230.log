@@ -1,0 +1,13 @@
+2024-07-18 21:52:30,baseAPI(line:89),ERROR|Traceback (most recent call last):
+  File "D:\Program Files\Delivery_System-master\Delivery_System-master\common\baseAPI.py", line 82, in request_send
+    ''')
+  File "D:\Program Files\ana\envs\py37\lib\site-packages\requests\models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Program Files\ana\envs\py37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "D:\Program Files\ana\envs\py37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Program Files\ana\envs\py37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+

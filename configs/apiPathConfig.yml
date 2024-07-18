@@ -1,0 +1,50 @@
+HOST:  &host
+Login: #登录模块--业务模块
+
+ login: #登录接口--接口层
+   method: POST
+   path: /account/sLogin
+ logout: #登出接口--接口层
+   method: POST
+   path: /xxxxx
+
+Shop: #店铺模块
+  update:
+    method: POST
+    path:  /shopping/updatemyshop
+  query:
+    method: GET
+    path:  /shopping/myShop
+  file_upload: #文件上传
+    method: POST
+    path:  /file
+
+Food: # 食品管理
+  addcategory:
+    method: POST
+    path: /shopping/addcategory
+  addfood:
+    method: POST
+    path: /shopping/addmyfood
+  query:
+    method: GET
+    path: /shopping/v2/myFoods
+  update:
+    method: POST
+    path: /shopping/v2/updatemyfood
+  delete:
+    method: DELETE
+    path: /shopping/v2/fooddel
+
+MyOrder: # 我的订单
+  query:
+    method: GET
+    path: /bos/myOrders
+
+UpdatePwd: # 修改密码
+  update:
+    method: POST
+    path: /account/updatePwd
+  logout:
+    method: POST
+    path: /account/logout
