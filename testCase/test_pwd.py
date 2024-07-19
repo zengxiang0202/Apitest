@@ -4,11 +4,14 @@
 # @Email   : 948795152@qq.com
 # @Software: PyCharm
 # Date: 2024/7/16
+import os
+
 import allure
 import pytest
 
 from common.apiAssert import ApiAssert
 from utils.handle_excel_V4 import get_excel_data
+from utils.handle_path import report_path
 
 
 @allure.epic('订餐系统')
@@ -34,4 +37,6 @@ class TestMyOrder:
         ApiAssert.api_assert(res, '==', exp_data, assert_info='code', msg='退出登录接口')
 
 if __name__ == '__main__':
-    pytest.main([__file__,'-sv'])
+    #pytest.main([__file__,'-sv'])
+    pytest.main([__file__, '-sv', '--alluredir', f'{report_path}', '--clean-alluredir'])
+    os.system(f'allure serve "{report_path}"')

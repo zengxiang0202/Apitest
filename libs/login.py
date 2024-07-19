@@ -27,7 +27,7 @@ class Login(BaseAPI):  # 登录模块的 业务类名--使用这个类名去获�
             return resp['data']['token']
         return resp  # 接口的响应数据
 
-# if __name__ == '__main__':#
-#     login_data = {'username': 'zxy0202', 'password': 'zxy153'}
-#     res = Login().login(login_data)
-#     print('响应数据--->',res)
+if __name__ == '__main__':#
+    login_data = {"username": "ct0909", "password": "89254"}
+    res = Login().login(login_data)
+    print('响应数据--->',res)

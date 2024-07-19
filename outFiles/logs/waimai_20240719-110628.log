@@ -1,0 +1,7 @@
+2024-07-19 11:06:29,baseAPI(line:85),INFO|业务模块名:Login,接口名:login,
+    请求的url:http://42.192.62.8:8082/account/sLogin/,
+    请求的方法:POST,
+    请求体数据:username=zxy0202&password=61fa517f4d1f4d4e999be58092b3da44,
+    响应数据:{'code': 9999, 'data': '', 'flag': '松勤教育', 'msg': '该用户不存在!', 'success': False},
+    响应状态码:200
+

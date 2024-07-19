@@ -24,6 +24,7 @@ def get_md5_data(pwd:str,salt=''):
 """
 外卖项目--RSA加密接口
 url = 'http://121.41.14.39:8082/account/loginRsa'
+
 参数：
     username  账号
     password: RSA加密的结果
@@ -48,29 +49,29 @@ rsa加密流程：
     4.还得使用base64编码处理加密后的数据
     5.解码，bytes---转成---str
 """
-class RsaEndecrype:
-    #需要公钥文件
-    def __init__(self,file_path='./public.pem'):
-        self.file_path=file_path
-    #加密方法
-    def encrypt(self,crypt_data):
-        #1.打开公钥文件，并且使用2进制打开
-        with open(self.file_path,'rb') as fo:
-            #2.获取g公钥的值
-            key_content = fo.read()
-            print(key_content)
-            #3.需要对加密的明文进行转化---bytes
-            crypt_data = crypt_data.encode('utf-8')
-            #4.需要一个公钥对象
-            public_key_object = RSA.importKey(key_content)
-            #5.生成一个加密对象
-            cipher_object = PKCS1_cipher.new(public_key_object)
-            #6.调用加密算法---获取的是一个bytes
-            res_bytes = cipher_object.encrypt(crypt_data)
-            print('加密后的数据>>>',res_bytes)
-            #再进过base64编码，再转化成的str
-            #decode解码  把字节码--变成-字符串
-            return base64.b64encode(res_bytes).decode()
+# class RsaEndecrype:
+#     #需要公钥文件
+#     def __init__(self,file_path='./public.pem'):
+#         self.file_path=file_path
+#     #加密方法
+#     def encrypt(self,crypt_data):
+#         #1.打开公钥文件，并且使用2进制打开
+#         with open(self.file_path,'rb') as fo:
+#             #2.获取g公钥的值
+#             key_content = fo.read()
+#             print(key_content)
+#             #3.需要对加密的明文进行转化---bytes
+#             crypt_data = crypt_data.encode('utf-8')
+#             #4.需要一个公钥对象
+#             public_key_object = RSA.importKey(key_content)
+#             #5.生成一个加密对象
+#             cipher_object = PKCS1_cipher.new(public_key_object)
+#             #6.调用加密算法---获取的是一个bytes
+#             res_bytes = cipher_object.encrypt(crypt_data)
+#             print('加密后的数据>>>',res_bytes)
+#             #再进过base64编码，再转化成的str
+#             #decode解码  把字节码--变成-字符串
+#             return base64.b64encode(res_bytes).decode()
 
 
 
@@ -79,5 +80,5 @@ class RsaEndecrype:
 if __name__ == '__main__':
     # res = get_md5_data('1232544441')
     # print(res)
-    res = RsaEndecrype().encrypt('123456')
+    res = get_md5_data("89254")
     print(res)

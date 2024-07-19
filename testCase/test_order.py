@@ -30,5 +30,6 @@ class TestMyOrder:
             ApiAssert.api_assert(res,'==',exp_data,assert_info='code',msg='订单搜索接口')
 
 if __name__ == '__main__':
-    pytest.main([__file__, '-sv', '--alluredir', f'{report_path}'])
-    os.system(f'allure serve {report_path}')
+    pytest.main([__file__, '-sv', '--alluredir', f'{report_path}','--clean-alluredir'])
+    # os.system(f'allure generate "{report_path}" -o "{report_path}/html"') 这句就是会在指定的report里面在生成一份html文件。
+    os.system(f'allure serve "{report_path}"')

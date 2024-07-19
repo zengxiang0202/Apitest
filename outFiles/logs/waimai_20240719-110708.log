@@ -1,0 +1,7 @@
+2024-07-19 11:07:08,baseAPI(line:85),INFO|业务模块名:Login,接口名:login,
+    请求的url:http://42.192.62.8:8082/account/sLogin/,
+    请求的方法:POST,
+    请求体数据:username=ct0909&password=00dee9ea36ffa3d24717b0adfb362ae6,
+    响应数据:{'code': 20000, 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjEzNjIwMzIsInVzZXJJZCI6MTY0MTMsInVzZXJuYW1lIjoiY3QwOTA5In0.yA66iA0Uost-eWnMWp8X6Wc7TOB_jTPtwC15nKfAWNk'}, 'flag': '松勤教育', 'msg': '成功', 'success': False},
+    响应状态码:200
+

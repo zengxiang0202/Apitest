@@ -64,7 +64,7 @@ if __name__ == '__main__':
     # pytest.main([__file__,'-s','--alluredir',f'{report_path}'])
     # 用mark标签定制化执行，比如只跑shop_query
     pytest.main(["test_shop.py", "-s", "-m=shop_query", "--alluredir", report_path, "--clean-alluredir"])
-    os.system(f'allure serve {report_path}')
+    os.system(f'allure serve "{report_path}"')
 
 """
 关于执行的困惑点：使用定制化执行 -m -v -k 跟 skip有什么区别？
