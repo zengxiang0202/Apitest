@@ -1,34 +1,33 @@
-#-*- coding: utf-8 -*-
-#@File    : handle_data.py
-#@Time    : 2022/8/3 22:21
-#@Author  : xintian
-#@Email   : 1730588479@qq.com
-#@Software: PyCharm
-#Date:2022/8/3 
+# -*- coding: utf-8 -*-
+# @File    : handle_data.py
+# @Author  : zengxiang0202
+# @Email   : 948795152@qq.com
+# @Software: PyCharm
+# Date: 2024/7/16
 import hashlib
+
+
 # 区别： “”  “ ”  None
-def get_md5_data(pwd:str,salt=''):
+def get_md5_data(pwd: str, salt=''):
     """
     :param pwd: 加密的明文
     :param salt: 盐值
     :return: 返回的加密后的密文
     """
-    #1.创建md5实例
+    # 1.创建md5实例
     md5 = hashlib.md5()
-    #2.加密函数操作
-    pwd = pwd+salt
+    # 2.加密函数操作
+    pwd = pwd + salt
     md5.update(pwd.encode('utf-8'))
-    #3.返回加密后的结果
-    return md5.hexdigest()#16进制数据  0123456789ABCDEF
+    # 3.返回加密后的结果
+    return md5.hexdigest()  # 16进制数据  0123456789ABCDEF
 
-"""
-外卖项目--RSA加密接口
-url = 'http://121.41.14.39:8082/account/loginRsa'
 
+""""
 参数：
     username  账号
     password: RSA加密的结果
-        1- xintian通过md5加密成密文--a
+        1- 通过md5加密成密文--a
         2- 使用RSA的公钥加密(a)
     sign 签名
         md5(username+password密文)
@@ -36,10 +35,11 @@ url = 'http://121.41.14.39:8082/account/loginRsa'
     - 1.完成md5加密算法
     - 2.rsa加密算法
 """
-#pip install  pycryptodome -i https://pypi.douban.com/sample/
+# pip install  pycryptodome -i https://pypi.douban.com/sample/
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_v1_5 as PKCS1_cipher
 import base64
+
 """
 rsa加密流程：
     前提条件：有公钥  字符串/xxx.pem
@@ -72,9 +72,6 @@ rsa加密流程：
 #             #再进过base64编码，再转化成的str
 #             #decode解码  把字节码--变成-字符串
 #             return base64.b64encode(res_bytes).decode()
-
-
-
 
 
 if __name__ == '__main__':
