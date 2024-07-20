@@ -12,8 +12,6 @@ allure serve D:\Program和Files\Delivery_System-master\outFiles\report\temp
 2.1启动失败（Job for jenkins.service failed because the control process exited with error code. See "systemctl status jenkins.service" and "journalctl -xe" for details.）
 打印了日志没有发现error，考虑是不是jdk配置的有什么问题？
 [root@localhost ~]# update-alternatives --config java
-
------------------------------------------------
    1           java-1.7.0-openjdk.x86_64 (/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64/jre/bin/java)
 *+ 2           java-1.8.0-openjdk.x86_64 (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/bin/java)
 发现这里没有显示我的jdk11信息，既然安装了 JDK 11，你需要将它添加到 update-alternatives 系统中
