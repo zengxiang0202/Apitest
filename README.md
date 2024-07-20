@@ -1,4 +1,5 @@
 1.allure报告报错。
+
 ![4b494385fa45a477260952b64606d0c](https://github.com/user-attachments/assets/731ee6e5-8569-49ee-8c3a-6b99afbc19a9)
 ![c100dbbbf4a11eb9d89c37cdf15b3dc](https://github.com/user-attachments/assets/db028f12-8e78-41ab-a03c-f06b34eb37a7)
 解决点是在 os.system 命令中用双引号包裹 {report_path} 变量，确保整个路径被视为一个字符串。因为打印了report_path路径是D:\Program Files\Delivery_System-master\outFiles\report\temp。虽然看似合理但问题就出在Program Files这两个单词有空格了
@@ -6,14 +7,12 @@
 allure serve D:\Program和Files\Delivery_System-master\outFiles\report\temp
 因此，命令会失败。修改之后，allure报告能成功打开。
 ![506acd423550d6f7dce8dc3a287f085](https://github.com/user-attachments/assets/93217d58-4d1f-488e-bab1-79cf5d4ff56a)
+
 2.安装完Jenkins启动时遇到的一些报错
 2.1启动失败（Job for jenkins.service failed because the control process exited with error code. See "systemctl status jenkins.service" and "journalctl -xe" for details.）
 打印了日志没有发现error，考虑是不是jdk配置的有什么问题？
 [root@localhost ~]# update-alternatives --config java
 
-共有 2 个提供“java”的程序。
-
-  选项    命令
 -----------------------------------------------
    1           java-1.7.0-openjdk.x86_64 (/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64/jre/bin/java)
 *+ 2           java-1.8.0-openjdk.x86_64 (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/bin/java)
