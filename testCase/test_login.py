@@ -31,7 +31,7 @@ class TestLogin:
 
 if __name__ == '__main__':
     # '-s' 打印print内容
-    pytest.main([__file__, '-s', '--alluredir', f'{report_path}', '--clean-alluredir'])
+    pytest.main([__file__, '-s', '--alluredir', f'{report_path}'])
     #   添加 --clean-alluredir 参数会在生成新的 Allure 报告之前清空指定的目录。这样每次运行测试时，报告目录会被清空，
     #   以确保报告中只包含当前运行测试的结果，而不会混杂之前运行的结果。有助于确保报告的准确性和清晰度。
     os.system(f'allure serve "{report_path}"')

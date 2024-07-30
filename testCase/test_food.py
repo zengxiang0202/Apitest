@@ -91,5 +91,5 @@ class TestFood:
         else:
             ApiAssert.api_assert(res, '==', exp_body, assert_info='code', msg='编辑食品接口')
 if __name__ == '__main__':
-    pytest.main([__file__,'-sv','--alluredir',f'{report_path}','--clean-alluredir'])    
+    pytest.main([__file__,'-sv','--alluredir',f'{report_path}',"--clean-alluredir"])
     os.system(f'allure serve "{report_path}"')

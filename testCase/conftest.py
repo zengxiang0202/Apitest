@@ -22,18 +22,17 @@ import os
 """
 
 
-@pytest.fixture(scope='session', autouse=True)
-def start_running():
-    print('---清除报告的的历史数据---')
-    try:
-        for one in os.listdir(report_path):
-            if 'json' in one or 'txt' in one:
-                os.remove(f'{report_path}/{one}')
-    except:
-        print('第一次执行pytest框架')
-    yield
-    print('自动化完成，做一些数据清除的操作')
-
+# @pytest.fixture(scope='session', autouse=True)
+# def start_running():
+#     print('---清除报告的的历史数据---')
+#     try:
+#         for one in os.listdir(report_path):
+#             if 'json' in one or 'txt' in one:
+#                 os.remove(f'{report_path}/{one}')
+#     except:
+#         print('第一次执行pytest框架')
+#     yield
+#     print('自动化完成，做一些数据清除的操作')
 
 # ----前置操作---登录操作-----
 # fixture有返回值的情况下，你使用这个函数的名字，就是调用它的返回值
@@ -76,6 +75,7 @@ def pytest_collection_modifyitems(items):
         item._nodeid = item.nodeid.encode("utf-8").decode("unicode_escape")
 
 
+
 """
 编码：把字符串变成计算机可以识别的字节码
 解码：把计算机可以识别 的字节码，变成我们可以认识的编码
@@ -116,3 +116,5 @@ def update_pwd_init(login_init):
     pwd = UpdatePwd(login_init)
     print('修改密码模块初始化...')
     return pwd
+
+

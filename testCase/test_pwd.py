@@ -38,5 +38,5 @@ class TestMyOrder:
 
 if __name__ == '__main__':
     #pytest.main([__file__,'-sv'])
-    pytest.main([__file__, '-sv', '--alluredir', f'{report_path}', '--clean-alluredir'])
+    pytest.main([__file__, '-sv', '--alluredir', f'{report_path}'])
     os.system(f'allure serve "{report_path}"')

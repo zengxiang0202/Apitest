@@ -4,8 +4,6 @@
 # @Email   : 948795152@qq.com
 # @Software: PyCharm
 # Date: 2024/7/16
-import requests
-
 """
 基类：
     - 1.里面需要写一个公共的发送方法
@@ -35,6 +33,7 @@ import requests
     
 
 """
+import requests
 from utils.handle_yml import get_yml_data
 import inspect
 import traceback
@@ -42,7 +41,6 @@ from configs.config import HOST
 from utils.handle_loguru import log
 from utils.handle_path import config_path
 import os
-
 
 class BaseAPI:  # 基类---后续业务类需要继承这个基类
     def __init__(self, in_token=None):  # 获取每一个业务模块类的接口的路径与方法

@@ -1,8 +1,0 @@
-INFO     common.baseAPI:baseAPI.py:85 2024-07-19 11:26:37.344 | INFO     | common.baseAPI:request_send:85 - 业务模块名:Shop,接口名:query,
-    请求的url:http://42.192.62.8:8082/shopping/myShop/?page=1&limit=-1,
-    请求的方法:GET,
-    请求体数据:None,
-    响应数据:{'timestamp': '2024-07-19 11:26:41', 'status': 500, 'error': 'Internal Server Error', 'message': 'Page size must not be less than one!; nested exception is java.lang.IllegalArgumentException: Page size must not be less than one!', 'path': '/shopping/myShop/'},
-    响应状态码:500
-
-INFO     common.apiAssert:apiAssert.py:54 2024-07-19 11:26:37.345 | INFO     | common.apiAssert:api_assert:54 - 查询接口断言:断言类型:==,断言结果是:True,预期的结果:Internal Server Error,实际的结果:Internal Server Error

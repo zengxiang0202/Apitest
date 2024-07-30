@@ -1,0 +1,14 @@
+INFO     common.baseAPI:baseAPI.py:83 2024-07-30 16:42:32.280 | INFO     | common.baseAPI:request_send:83 - 业务模块名:Login,接口名:login,
+    请求的url:http://42.192.62.8:8082/account/sLogin/,
+    请求的方法:POST,
+    请求体数据:username=ct0909&password=00dee9ea36ffa3d24717b0adfb362ae6,
+    响应数据:{'code': 20000, 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjIzMzI1NTIsInVzZXJJZCI6MTY0MTMsInVzZXJuYW1lIjoiY3QwOTA5In0.gMV02hNz5DSMufv9ejxgKtaEIQeqaaD6Ipyx7HhcE1o'}, 'flag': '松勤教育', 'msg': '成功', 'success': False},
+    响应状态码:200
+INFO     common.baseAPI:baseAPI.py:83 2024-07-30 16:42:32.430 | INFO     | common.baseAPI:request_send:83 - 业务模块名:Shop,接口名:query,
+    请求的url:http://42.192.62.8:8082/shopping/myShop/?page=1&limit=1,
+    请求的方法:GET,
+    请求体数据:None,
+    响应数据:{'code': 20000, 'data': {'current': 1, 'pages': 1, 'records': [{'_id': '63db1743b202a8000148b0de', 'activities': [{'icon_name': '减', 'name': '满减优惠', 'description': '满30减5，满60减8', 'icon_color': 'f07373', 'id': 0}], 'address': '上海市静安区秣陵路303号', 'category': '快餐便当/简餐', 'delivery_mode': {'id': 1, 'text': '蜂鸟专送', 'is_solid': True, 'color': '57A9FF'}, 'description': '满30减5，满60减8', 'distance': '', 'float_delivery_fee': '5', 'float_minimum_order_amount': '20', 'id': '15169', 'identification': {'identificate_agency': '', 'licenses_number': '', 'company_name': '', 'registered_address': '', 'licenses_scope': '', 'registered_number': '', 'legal_person': '', 'licenses_date': '', 'operation_period': '', 'identificate_date': ''}, 'image_path': '34b2c8c1-c90e-43c1-afed-69c9f812b7a3.png', 'is_new': True, 'is_premium': 'true', 'latitude': 31.22114, 'license': {}, 'location': [121.54409, 31.22114], 'longitude': 121.54409, 'name': '星巴克新建店', 'opening_hours': ['08:30/20:30'], 'order_lead_time': '30分钟', 'phone': '13176876632', 'piecewise_agent_fee': {'tips': '配送费约￥5'}, 'promotion_info': '', 'rating': 6.0, 'rating_count': 200, 'recent_order_num': 100, 'status': 1, 'supports': [{'name': '外卖保', 'description': '已加入“外卖保”计划，食品安全有保障', 'id': 7, 'icon_color': '999999', 'icon_name': '保'}, {'name': '准时达', 'description': '准时必达，超时秒赔', 'id': 9, 'icon_color': '57A9FF', 'icon_name': '准'}, {'name': '开发票', 'description': '该商家支持开发票，请在下单时填写好发票抬头', 'id': 4, 'icon_color': '999999', 'icon_name': '票'}]}], 'size': 1, 'sort': '', 'total': 1}, 'flag': '松勤教育', 'msg': '成功', 'success': False},
+    响应状态码:200
+
+INFO     common.apiAssert:apiAssert.py:54 2024-07-30 16:42:32.430 | INFO     | common.apiAssert:api_assert:54 - 店铺查询接口断言:断言类型:==,断言结果是:True,预期的结果:20000,实际的结果:20000

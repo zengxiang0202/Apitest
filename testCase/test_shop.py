@@ -61,9 +61,9 @@ class TestShop:
 
 
 if __name__ == '__main__':
-    # pytest.main([__file__,'-s','--alluredir',f'{report_path}'])
+    pytest.main([__file__,'-s','--alluredir',f'{report_path}'])
     # 用mark标签定制化执行，比如只跑shop_query
-    pytest.main(["test_shop.py", "-s", "-m=shop_query", "--alluredir", report_path, "--clean-alluredir"])
+    # pytest.main(["test_shop.py", "-s", "-m=shop_query", "--alluredir", report_path])
     os.system(f'allure serve "{report_path}"')
 
 """

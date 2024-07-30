@@ -1,0 +1,8 @@
+INFO     common.baseAPI:baseAPI.py:83 2024-07-30 16:41:30.981 | INFO     | common.baseAPI:request_send:83 - 业务模块名:Login,接口名:login,
+    请求的url:http://42.192.62.8:8082/account/sLogin/,
+    请求的方法:POST,
+    请求体数据:username=&password=c607d58e3618832f937d80d500a6046c,
+    响应数据:{'code': 9999, 'data': '', 'flag': '松勤教育', 'msg': '该用户不存在!', 'success': False},
+    响应状态码:200
+
+INFO     common.apiAssert:apiAssert.py:54 2024-07-30 16:41:30.981 | INFO     | common.apiAssert:api_assert:54 - 登录接口断言:断言类型:==,断言结果是:True,预期的结果:该用户不存在!,实际的结果:该用户不存在!
