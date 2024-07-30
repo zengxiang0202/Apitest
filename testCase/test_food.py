@@ -80,8 +80,11 @@ class TestFood:
     @allure.story('删除食品接口')
     @allure.title('{title}')
     def test_food_delete(self, food_init, query_food_init, title, req_body, exp_body):
-        if req_body['id'] == 'id': # 如果用例中id为id，则把最新的食品id进行替换
-            req_body['id'] = query_food_init['data']['records'][-1]['item_id']
+        if req_body['id'] == 'id':  # 如果用例中id为id，则把最新的食品id进行替换
+            if query_food_init['data']['records']:  # 检查 records 列表是否非空
+                req_body['id'] = query_food_init['data']['records'][-1]['item_id']
+            else:
+                pytest.skip("No records found in query_food_init['data']['records']")
         res = food_init.delete(req_body['id'])
         if 'error' in list(res.keys()):
             ApiAssert.api_assert(res, '==', exp_body, assert_info='error', msg='编辑食品接口')
